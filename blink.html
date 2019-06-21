@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h2{
+            text-align: center;
+            margin: 50px auto;
+            font-size: 36px;
+            color: green;
+            
+        }
+        @keyframes blink{
+            50% {
+                color: transparent;
+            }
+        }
+        .highligh{
+            animation: 1s blink 3 steps(1);
+        }
+        .btn{
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border:1px solid yellow;
+            margin: 50px auto;
+        }
+        h3{
+            width: 120px;
+            margin: 0 auto;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 1px solid;
+            font-family: monospace;
+            animation: typing 6s steps(15),
+                       caret 1s steps(1) infinite;
+        }
+        @keyframes typing{
+            from {
+                width: 0;
+            }
+        }
+        @keyframes caret{
+            50% {
+                border-color: transparent;
+            }
+        }
+    </style>
+    <script>
+        window.onload=function() {
+            var div = document.getElementsByTagName('div')[0];
+            var h2 = document.getElementsByTagName('h2')[0];
+            div.onclick=function() {
+                h2.classList.add('highligh');
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>的会计岗的几个</h2>
+    <div class="btn">按钮</div>
+    <h3>css fajhg kgjdj</h3>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>多行文本垂直居中</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            height: 200px;
+            line-height: 200px;
+            background:pink;
+        }
+        .fill-available {
+            display: inline-block;
+            vertical-align: middle;
+            width: -webkit-fill-available;
+            width: -moz-fill-available;
+            width: -moz-available;    /* FireFox目前这个生效 */
+            width: fill-available;
+            line-height: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="fill-available">
+            width:fill-available可以让元素的宽度表现为默认的block水平元素的尺寸表现。<br>
+            但这里实际上是display:inline-block水平的，<br>
+            于是，我们可以保证宽度满尺寸自适应的同时使用line-height实现近似的垂直居中效果。
+        </div>
+    </div>
+</body>
+</html>

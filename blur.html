@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            margin: 40px auto;
+            width: 546px;
+            height: 390px;
+            padding: 60px 85px;
+            box-sizing: border-box;
+        }
+        .main{
+            background:url('http://pic28.photophoto.cn/20130711/0005018639804345_b.jpg') 0/cover fixed;
+        }
+        .box::before{
+            background:url('http://pic28.photophoto.cn/20130711/0005018639804345_b.jpg') 0/cover fixed;
+        }
+        .box{
+            width: 300px;
+            height: 200px;
+            position: relative;
+            background: hsla(0, 0%, 100%, 0.3);
+            overflow: hidden;
+            line-height: 30px;
+            vertical-align: middle;
+            z-index: 2;
+        }
+        .box::before{
+            content: '';
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            filter: blur(20px);
+            margin: -30px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">开水果卡见到过阿卡几个卡时间大概卡戴珊啊哈卡的加大了对公开大垃圾袋快乐更健康大声道按揭贷款是国家来说阿济格卡戴珊打过来按揭公司看到了就干</div>
+    </div>
+</body>
+</html>

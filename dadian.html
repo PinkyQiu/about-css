@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            height: 40px;
+            line-height: 20px;
+            overflow: hidden;
+            margin:50px auto;
+        }
+        .txt{
+            float: right;
+            margin-left: -5px;
+            width: 100%;
+            word-break: break-all;
+        }
+        .wrapper::before{
+            float: left;
+            width: 5px;
+            content:'';
+            height: 40px;
+        }
+        .wrapper::after{
+            float: right;
+            content:'...';
+            height: 20px;
+            line-height: 20px;
+            width: 3em;
+            margin-left: -3em;
+            position: relative;
+            left: 100%;
+            top: -20px;
+            padding-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="txt">的价格还贷款的工具打开个快递和更快的的JFK的地理空间逛逛打开价格肯定价格价格肯定JFK对方的空间看到的看的</div>
+    </div>
+</body>
+</html>

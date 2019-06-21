@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 250px;
+            height: 180px;
+            margin: 40px auto;
+        }
+        .box{
+            background: linear-gradient(to left bottom,transparent 50%,rgba(0,0,0,0.4) 0) no-repeat 100% 0/21px 21px,
+                        linear-gradient(-135deg, transparent 15px, #58a 0);
+                        
+        }
+        .box1{
+            position: relative;
+            background:linear-gradient(-150deg,transparent 20px ,#58a 0);
+            border-radius: 5px;
+        }
+        .box1::before{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 24px;
+            height: 42px;
+            background:linear-gradient(to left bottom, transparent 50%,rgba(0,0,0,0.4) 0) 100% 0 no-repeat;
+            transform: rotate(-30deg) translate(9px,-15px);
+            content: '';
+            transform-origin: bottom right;
+            border-bottom-left-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box1"></div>
+</body>
+</html>

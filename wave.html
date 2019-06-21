@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .water_wrap { 
+            height: 128px;
+            width: 128px;
+            border: 1px solid black;
+            position: absolute;
+            top: 18px;
+            transform: rotate(45deg); /*倾斜45度*/
+            left: 50%;
+            top: 50%;
+            margin-top: -143px;
+            margin-left: -70px;
+            overflow: hidden; /*超出的隐藏*/
+        }
+
+        /*矩形上面的遮罩*/
+
+        .water_shadow {
+            height: 87px;
+            width: 188px;
+            left: 50%;
+            top: 50%;
+            background: rgb(255, 247, 247);
+            transform: ratate(45deg);
+            position: absolute;
+            margin-top: -168px;
+            margin-left: -99px;
+            z-index: 2;
+        }
+
+        .water {
+            position: absolute;
+            height: 50px;
+            width: 50px; top: 104px;
+            left: 120%;
+            transform: ratate(45deg);
+            margin-left: -50px;
+            animation: water 3s linear infinite; /*动画模拟水流的滚动*/
+            background: rgb(9, 174, 227);
+            border-radius: 34%; /*模拟水流的波浪*/
+        }
+        @keyframes water {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 5px solid rgb(118, 218, 255);
+            overflow: hidden;
+            margin: 500px auto 0;
+        }
+        .wave {
+            position: absolute;
+            left: 50%;
+            margin-left: -175px;
+            width: 350px;
+            height: 200px;
+            background-color: rgb(118, 218, 255);
+            
+        } 
+        .wave::before,
+        .wave::after{
+            content: "";
+            position: absolute;
+            width: 460px;
+            height: 500px;
+            top: 0;
+            left: 50%;
+            background-color: rgba(255, 255, 255, .4);
+            border-radius: 45%;
+            transform: translate(-50%, -70%) rotate(0);
+            animation: rotate 6s linear infinite;
+            z-index: 10;
+        }
+        .wave::after {
+            border-radius: 47%;
+            background-color: rgba(255, 255, 255, .9);
+            transform: translate(-50%, -70%) rotate(0);
+            animation: rotate 10s linear -5s infinite;
+            z-index: 20;
+        }   
+        @keyframes rotate {
+            50% {
+                transform: translate(-50%, -73%) rotate(180deg);
+            } 100% {
+                transform: translate(-50%, -70%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="water_shadow"></div>
+        <div class="water_wrap">
+            <div class="water"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="wave"></div>
+    </div>
+   
+</body>
+</html> 

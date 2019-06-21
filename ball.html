@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            position: absolute;
+            top: 500px;
+            left: 300px;
+            transition-duration: 300ms;
+            transition-property: transform;
+            transition-timing-function: cubic-bezier(0.56, 0.26, 1, 0.18);
+
+        }
+        .inner{
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: red;
+            border-radius: 50%;
+            transition: transform 300ms linear;
+        }
+        .btn{
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var btn = document.getElementsByClassName('btn')[0];
+            var box = document.getElementsByClassName('box')[0];
+            btn.onclick = function() {
+                console.log(1)
+                box.style.transform = 'translate3d(-300px,-500px,0)';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="box">
+        <span class="inner"></span>
+    </div>
+    <div class="btn">按钮</div>
+</body>
+</html>

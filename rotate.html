@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+             margin: 30px auto;
+             width: 200px;
+             overflow: hidden;
+             /* transform: rotate(45deg);
+             border:1px solid red; */
+        }
+        .img{
+            max-width: 100%;
+            clip-path: polygon(50% 0,100% 50%,50% 100%, 0 50%);
+            transition: 1s clip-path;
+            /* transform: rotate(-45deg) scale(1.42); */
+        }
+        .img:hover{
+            clip-path: polygon(0 0,100% 0, 0 100%, 0 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="http://b-ssl.duitang.com/uploads/item/201604/24/20160424200531_nRvS2.jpeg" alt="" class="img">
+    </div>
+</body>
+</html>
